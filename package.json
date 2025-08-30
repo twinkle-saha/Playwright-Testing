@@ -1,0 +1,27 @@
+{
+  "name": "orange_hrm_playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:demo" :" cross-env ENV_NAME=demo npx playwright test",
+    "test_demo_ui":"cross-env ENV_NAME=demo npx playwright test --ui",
+    "test-demo-tag":"cross-env ENV_NAME=demo npx playwright test --grep=@UAT"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cross-env": "^10.0.0",
+    "crypto-js": "^4.2.0",
+    "cryptojs": "^2.5.3",
+    "dotenv": "^17.2.1",
+    "playwright": "^1.55.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^24.3.0"
+  }
+}
