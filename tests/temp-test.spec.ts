@@ -7,7 +7,7 @@ import {test} from '../fixtures/hooks-fixture'
 // test.afterEach('After each hook',async({logoutPage})=>{
 //   await logoutPage.Logout();
 // })
-test.skip('Temp test',async({page,loginPage,commonUtil,gotoUrl,logout})=>{
+test('Temp test',async({page,loginPage,commonUtil,gotoUrl,logout})=>{
    // const commonUtil = new CommonUtil() -- no need to import this as we already created fixture file for this and fixture file in imported
   console.log(process.env.BASE_URL)
 

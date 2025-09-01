@@ -1,5 +1,4 @@
 import { test as baseTest} from '../fixtures/common-fixture'
-import { LogoutPage } from '../pages/LogoutPage'
 
 type HooksFixture ={
     gotoUrl : any

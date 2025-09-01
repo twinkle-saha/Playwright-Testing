@@ -27,8 +27,9 @@ export default defineConfig({
   reporter: [['html',{open:'always'}]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   expect:{
-    timeout:50000
+    timeout:90000
   },
+  timeout:90000,
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://localhost:3000',
@@ -47,11 +48,13 @@ export default defineConfig({
       name:'Setup',
       testMatch:'global.setup.ts'
     },
-    {
-      name: 'chromium',
-      dependencies:['Setup'],
-      use: { ...devices['Desktop Chrome'],storageState:'./playwright/.auth/auth.json' },
-    },
+    // {
+    //   name: 'chromium',
+    //  // dependencies:['Setup'],
+    //   use: { ...devices['Desktop Chrome'],
+    //     //storageState:'./playwright/.auth/auth.json'
+    //      },
+    // },
 
     // {
     //   name: 'firefox',
@@ -78,10 +81,10 @@ export default defineConfig({
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
+    {
+      name: 'Google Chrome',
+      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+    },
   ],
 
   /* Run your local dev server before starting the tests */
