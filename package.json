@@ -6,7 +6,8 @@
     "test:demo": " cross-env ENV_NAME=demo npx playwright test",
     "test_demo_ui": "cross-env ENV_NAME=demo npx playwright test --ui",
     "test-demo-tag": "cross-env ENV_NAME=demo npx playwright test --grep=@UAT",
-    "test-pim":" cross-env ENV_NAME=demo npx playwright test tests/pim-module.spec.ts"
+    "test-pim":" cross-env ENV_NAME=demo npx playwright test tests/pim-module.spec.ts",
+    "test_api" : "cross-env ENV_NAME=demo npx playwright test --project=api-testing"
   },
   "keywords": [],
   "author": "",
