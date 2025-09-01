@@ -35,7 +35,9 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
     baseURL: process.env.API_BASE_URL,
     extraHTTPHeaders:{
-      Accept :'application/json'
+      Accept :'application/json',
+      'content-type':'application/json',
+      Authorization : 'Basic YWRtaW46cGFzc3dvcmQxMjM='
     }, 
     ignoreHTTPSErrors : true,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */

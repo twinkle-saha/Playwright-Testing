@@ -1,6 +1,6 @@
 import { expect } from 'playwright/test';
 import { test } from '../fixtures/hooks-fixture'
-import pimModuleData from '../data/pim-module-data.json'
+import pimModuleData from '../data/ui-data/pim-module-data.json'
 
 // //manually logging in without setup file.
 test.beforeEach('Login to the Application', async ({ page, loginPage, commonUtil }) => {
