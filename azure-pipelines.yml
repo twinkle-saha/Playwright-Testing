@@ -7,20 +7,20 @@ trigger:
 - main
 
 pool:
-  vmImage: window-latest
+  vmImage: windows-latest
 
 steps:
--
+
 - task: NodeTool@0
   inputs:
-    versionSource: 'spec'
+    
     versionSpec: '23.x'
     checkLatest: true
 - script : npm ci
   displayName : 'Install Playwright Deps' 
 
-- script : npx playwright install --with-deps
+- script: npx playwright install --with-deps
   displayName: "Install Playwright Browsers"
 
-- script : npx playwright test
-  displayName : 'Start execution'
+- script: npx playwright test
+  displayName: 'Start execution'
